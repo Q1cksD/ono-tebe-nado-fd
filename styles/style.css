@@ -1,1 +1,281 @@
-/* место для вашего кода */
+.header {
+  padding: 90px 83px 96px 50px;
+  display: grid;
+  grid-template-columns: 1fr min-content 1fr;
+  align-items: center;
+}
+
+.header__navigation {
+  padding-right: 36px;
+}
+
+.header__navigation-inner {
+  display: flex;
+  justify-content: space-between;
+  list-style: circle;
+  font-size: 18px;
+  text-underline-offset: 4px;
+}
+
+.navigation-active-link {
+  list-style: none;
+}
+
+.navigation-active-link>a {
+  text-decoration: none;
+}
+
+.header__logo {
+  display: block;
+  width: 129px;
+}
+
+.header__address {
+  max-width: 240px;
+  justify-self: end;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 24px;
+  text-underline-offset: 4px;
+}
+
+.cover {
+  position: relative;
+  padding: 165px 50px 50px;
+  margin-bottom: 180px;
+  background-image: url(../images/cover.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  opacity: 60%;
+  z-index: 0;
+}
+
+.cover__title {
+  padding-bottom: 106px;
+  opacity: 0.999;
+  z-index: 0;
+}
+
+.accent-span {
+  display: block;
+  font-weight: bold;
+  font-size: 100px;
+  line-height: 115px;
+  letter-spacing: 0.3em;
+  margin-right: -0.3em;
+  text-transform: uppercase;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+
+}
+
+.cover__description {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 0.999;
+  z-index: 1;
+}
+
+.cover__description-text {
+  font-size: 22px;
+  line-height: 28px;
+  text-transform: uppercase;
+  word-spacing: 30px;
+}
+
+.cover__description-button {
+  font-size: 22px;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 12px 32px;
+  border: solid #fff 1px;
+  background: transparent 100%;
+}
+
+.cover__description-button>a {
+  text-decoration: none;
+}
+
+.lots {
+  padding: 0 24px;
+  margin-bottom: 120px;
+}
+
+.lots__title {
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 47px;
+  text-transform: uppercase;
+  color: #000000;
+  padding-left: 40px;
+  padding-bottom: 27px;
+}
+
+.lots__cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.card {
+  position: relative;
+  display: block;
+  list-style: none;
+  max-width: 334px;
+  min-height: 596px;
+  color: #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.card-image-movie {
+  background-image: url(../images/card-lot-01.jpg);
+}
+
+.card-image-book {
+  background-image: url(../images/card-lot-02.jpg);
+}
+
+.card-image-paint {
+  background-image: url(../images/card-lot-03.jpg);
+}
+
+.card__inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 48px 40px;
+  z-index: 1;
+  opacity: 0.999;
+}
+
+.card__inner-title {
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 26px;
+  text-transform: uppercase;
+}
+
+.card__inner-text {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.link__look-more {
+  display: block;
+  padding-left: 40px;
+  padding-top: 30px;
+  font-size: 20px;
+  color: #000000;
+}
+
+.about {
+  padding: 0 24px;
+  margin-bottom: 180px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr min-content min-content;
+  align-items: center;
+  grid-template-areas:
+    "logo title title"
+    ". description-start description-start"
+    ". description-end description-end";
+}
+
+.about__logo-background {
+  background-color: #000;
+  border-radius: 50%;
+  width: 240px;
+  height: 240px;
+  grid-area: logo;
+  justify-self: center;
+}
+
+.about__logo {
+  width: 100%;
+  padding: 63px 46px;
+}
+
+.about__title {
+  grid-area: title;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 47px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.about__description {
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+}
+
+.description-start {
+  grid-area: description-start;
+  padding-bottom: 24px;
+}
+
+.description-end {
+  grid-area: description-end;
+}
+
+.footer {
+  padding: 0 50px 82px;
+  display: flex;
+  justify-content: space-between;
+  color: #000;
+}
+
+.footer__address {
+  text-underline-offset: 4px;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.footer__navigation-list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  text-underline-offset: 4px;
+}
+
+.navigation-active-link {}
+
+.footer__social__links {}
+
+.footer__social__links-list {
+  display: flex;
+  gap: 48px;
+  list-style: none;
+}
+
+.social__links-item {
+  width: 48px;
+  height: 48px;
+}
