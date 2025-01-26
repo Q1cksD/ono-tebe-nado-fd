@@ -102,12 +102,16 @@
 }
 
 .cover__description-button {
-  font-size: 22px;
-  text-transform: uppercase;
-  color: #fff;
   padding: 12px 32px;
   border: solid #fff 1px;
+}
+
+.bet-button {
   background: transparent 100%;
+  color: #fff;
+  border: none;
+  font-size: 22px;
+  text-transform: uppercase;
 }
 
 .cover__description-button>a {
@@ -264,10 +268,6 @@
   text-align: center;
   text-underline-offset: 4px;
 }
-
-.navigation-active-link {}
-
-.footer__social__links {}
 
 .footer__social__links-list {
   display: flex;
