@@ -6,7 +6,8 @@
 }
 
 .header__navigation {
-  padding-right: 36px;
+  padding-right: 44px;
+  min-width: 432px;
 }
 
 .header__navigation-inner {
@@ -30,16 +31,20 @@
 }
 
 .header__logo {
-  width: 129px;
+  width: 137px;
 }
 
-.header__address {
-  max-width: 240px;
-  justify-self: end;
+.address {
   font-style: normal;
   font-size: 18px;
   line-height: 24px;
   text-underline-offset: 4px;
+}
+
+.header__address {
+  padding-right: 4px;
+  max-width: 240px;
+  justify-self: end;
 }
 
 .cover {
@@ -65,7 +70,10 @@
 }
 
 .cover__title {
-  padding-bottom: 95px;
+  padding-bottom: 83px;
+  /* z-index работает с элементами, у которых значение свойства opacity меньше 1. Например, трюк с opacity: 0.999 почти не повлияет на внешний вид, но позволит использовать z-index без изменения позиционирования элемента.
+  https://doka.guide/css/z-index/ (раздел подсказки) 
+  Если данную способ нельзя использовать - прошу, пожалуйста, более подробно объяснить чем плох такой метод*/
   opacity: 0.999;
   z-index: 0;
 }
@@ -96,13 +104,14 @@
   align-items: center;
   opacity: 0.999;
   z-index: 1;
+  
 }
 
 .cover__description-text {
   font-size: 22px;
   line-height: 28px;
   text-transform: uppercase;
-  word-spacing: 30px;
+  word-spacing: 19px;
 }
 
 .bet-button {
@@ -112,7 +121,7 @@
   font-size: 22px;
   text-transform: uppercase;
   cursor: pointer;
-  border: solid #fff 1px;
+  border: solid currentColor 1px;
 }
 
 .lots {
@@ -176,6 +185,7 @@
   font-size: 22px;
   line-height: 26px;
   text-transform: uppercase;
+  text-underline-offset: 3px;
 }
 
 .card__inner-text {
@@ -188,11 +198,12 @@
   padding-left: 40px;
   padding-top: 30px;
   font-size: 20px;
+  text-underline-offset: 5px;
   color: #000000;
 }
 
 .about {
-  padding: 0 24px;
+  padding: 0 22px;
   margin-bottom: 180px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -205,6 +216,8 @@
 }
 
 .about__logo-background {
+  margin-top: 3px;
+  margin-right: 16px;
   background-color: #000;
   border-radius: 50%;
   width: 240px;
@@ -219,10 +232,11 @@
 }
 
 .about__title {
+  margin-top: 15px;
+  margin-left: 9px;
   grid-area: title;
   font-weight: bold;
   font-size: 40px;
-  line-height: 47px;
   text-transform: uppercase;
   color: #000000;
 }
@@ -234,11 +248,14 @@
 }
 
 .description-start {
+  margin-top: 9px;
+  margin-left: 9px;
   grid-area: description-start;
   padding-bottom: 24px;
 }
 
 .description-end {
+  margin-left: 9px;
   grid-area: description-end;
 }
 
@@ -249,13 +266,6 @@
   color: #000;
 }
 
-.footer__address {
-  text-underline-offset: 4px;
-  font-style: normal;
-  font-size: 18px;
-  line-height: 24px;
-}
-
 .footer__navigation-list {
   display: flex;
   flex-direction: column;
@@ -264,6 +274,7 @@
   line-height: 21px;
   text-align: center;
   text-underline-offset: 4px;
+  padding-left: 3px;
 }
 
 .footer__social__links-list {
